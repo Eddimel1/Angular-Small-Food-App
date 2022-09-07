@@ -1,0 +1,19 @@
+<div *ngIf="product" class="food-cart-container">
+    <div class="foodname">{{product.title}}</div>
+    <img  class="object-contain max-h-96" [src]=" extendedProduct &&extendedProduct.imageType !== 'gif'  ? extendedProduct.image : 'https://almunajemfoods.com/wp-content/uploads/2019/08/NO_IMG_500x500.png'" />
+    <div class="amount-container">
+        <button  (click)="decrement()">
+            <mat-icon class="icon">remove</mat-icon>
+        </button >
+        <div class="amount">{{extendedProduct.amount}}</div>
+        <button (click) ="increment()">
+            <mat-icon class="icon">add</mat-icon>
+        </button >
+    </div>
+    <div class="foodBottom">
+        <div class="price">{{extendedProduct.price}}$</div>
+        <button (click)="addProduct($event,extendedProduct)" class="addtocart">
+            <mat-icon >add_shopping_cart</mat-icon>
+            add to cart</button>
+    </div>
+</div>

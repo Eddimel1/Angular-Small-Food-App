@@ -1,0 +1,113 @@
+.home-wrapper{
+    font-family: Georgia, 'Times New Roman', Times, serif ;
+    overflow: hidden;
+    font-style: italic;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(https://images.adsttc.com/media/images/538f/533b/c07a/803d/f400/0236/large_jpg/KiloDesign_LlamaRestaurant_07.jpg?1401901865);
+    background-repeat: no-repeat;
+    filter: contrast(1.2);
+    z-index: -1;
+    filter: grayscale(0%);
+    animation: appear 2s ease-out;
+    &::after{
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(48,187,132,1) 0%, rgba(9,121,120,1) 42%, rgba(6,162,134,1) 76%, rgba(0,255,141,1) 100%);
+        mix-blend-mode: multiply;
+        opacity: 0.5;
+        left: 0;
+        top: 0;
+        z-index:-1;
+    }
+}
+.home-wrapper::after{
+    
+}
+.cheff-img{
+    position: absolute;
+    bottom:0 ;
+    left: 60%;
+    filter: blur(0.4px) hue-rotate(30deg);
+    animation: cheff-appear 1s ease-in-out;
+}
+.slogan-container{
+    @apply absolute flex flex-col;
+    box-shadow: 0px 0px 5px white;
+    top: 45%;
+    left: 7%;
+    width: 50%;
+    height:max-content;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 3;
+    border-radius: 10px;
+    animation: slogan-appear 1.3s ease-in-out;
+    gap: 2rem;
+    padding:1rem;
+}
+.restaurant-name{
+    @apply text-5xl font-extrabold self-center;
+    text-decoration:underline;
+}
+.slogan-and-slogan{
+    @apply flex justify-around mt-5 font-medium;
+}
+.slogan2{
+    text-decoration: line-through;
+}
+.tagline{
+    padding: 1rem;
+}
+.buttonlink{
+    @apply w-56 h-14 bg-orange-700 rounded self-end font-bold cursor-pointer text-center flex justify-center;
+    line-height: 18px;
+    
+    transition: all 0.2s ease-in-out;
+    &:hover{
+     transform:scale(1.05);
+     background-color: orangered;
+     color: white;
+    }
+ }
+ .check-icon{
+    align-self: center;
+ }
+@keyframes appear {
+    0%{
+       opacity: 0.3;
+       filter: grayscale(100%);
+    }
+    50%{
+        opacity: 0.7;
+        filter: grayscale(50%);
+    }
+    100%{
+        opacity: 1;
+        filter: grayscale(0%);
+    }
+    
+}
+@keyframes cheff-appear {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes slogan-appear {
+    
+    0%{
+        opacity: 0.2;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

@@ -1,0 +1,29 @@
+.search-container{
+    @apply w-2/3 m-auto mt-4 font-mono;
+    
+    
+}
+.input-and-icon{
+    display: flex;
+    gap: 0.5rem;
+}
+.input-item{
+    @apply w-full rounded pl-3;
+    text-shadow: 0px 0px 3px rgb(224, 158, 14);
+    box-shadow: 0px 0px 5px rgb(231, 228, 222);
+    color:orange;
+    transition: all 0.2s ease-in-out;
+    &::placeholder{
+        color: orange;
+        padding: 0.5rem;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: 0px 0px 5px rgb(230, 79, 9);
+        transform: translateX(5px);
+        &::placeholder{
+            color: rgb(230, 79, 9);
+        }
+    }
+    
+}

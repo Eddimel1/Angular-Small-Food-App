@@ -1,0 +1,61 @@
+$size : 40px;
+.navBar{
+    @apply w-full bg-slate-300 shadow-lg shadow-slate-700 h-16;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   
+}
+.link-Container{
+    @apply flex flex-row w-3/5 justify-between align-middle m-auto h-full
+}
+.link{
+    @apply from-neutral-900 font-semibold uppercase drop-shadow-md shadow-blue-600/50 font-mono italic text-lg self-center gap-5 relative;
+    cursor: pointer;
+    &:hover{
+        color:rgb(155, 155, 252);
+        .dropdown{
+           height: 200px;
+        }
+    }
+}
+.active{
+    color:aqua;
+    text-decoration: underline;
+}
+.icon{
+    margin-bottom:-4px;
+}
+.dropdown{
+    @apply w-32 h-0 bg-slate-700 absolute text-center z-50;
+    transition:height 0.3s ease-in-out;
+   
+    overflow: hidden;
+    &:first-child {
+        margin-top:20px;           
+     }
+}
+.drop-item-container{
+    @apply flex flex-col;
+    margin-top: 1rem;
+}
+.dropdown-item{
+    transition: all 0.3s ease-in-out;
+    align-self: start;
+    margin-left:10px;
+    &:hover{
+        color:aqua;
+        text-decoration: underline;
+        transform:translateX(-2px);
+    }
+}
+.amount{
+   @apply w-4 h-4 absolute bg-emerald-600 rounded-full text-slate-200 text-sm text-center ;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   margin: 0.2rem;
+   right:-3px;
+   top:-5px;
+}
+.cart{
+    font-size: $size;
+    width: $size;
+    height: $size;
+}

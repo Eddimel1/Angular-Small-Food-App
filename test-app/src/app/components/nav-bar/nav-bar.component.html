@@ -1,0 +1,25 @@
+<div class="navBar">
+   <ul  class="link-Container">
+   <li class="link" *ngFor="let link of links; let isLast = last">
+   
+    <a  routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="link.path">
+        <mat-icon [ngClass]="{'cart' : isLast}" class="icon" >{{link.icon}}
+            <span class="amount" *ngIf="isLast">{{amount}}</span>
+        </mat-icon>
+        {{link.name}}</a>
+        
+        <ul *ngIf="link.dropdown" class="dropdown">
+            <div class="drop-item-container">
+                    <a  class="dropdown-item" *ngFor="let item of link.dropdown ; index as i ;" [routerLink]="item.path">
+                        <mat-icon class="relative">
+                            {{item.icon}}</mat-icon>
+                    
+                    {{item.name}}</a>
+            </div>
+            
+        </ul>
+   </li>
+</ul> 
+
+</div>
+

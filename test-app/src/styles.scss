@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: linear-gradient(302deg, rgba(246,241,241,1) 0%, rgba(252,241,241,1) 53%, rgba(240,240,240,1) 100%);
+}
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

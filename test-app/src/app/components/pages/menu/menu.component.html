@@ -1,0 +1,9 @@
+<app-menu-layout>
+    <app-search (newSearchTerm) ="GetChildData($event)" ></app-search>
+    <div class="menu-container">
+        <app-food-cart  *ngFor="let product of products | filterPipe:searchTerm ; let i = index" [product]="product"
+        ></app-food-cart>
+ 
+    </div>
+    
+    </app-menu-layout>

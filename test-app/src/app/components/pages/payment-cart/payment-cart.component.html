@@ -1,0 +1,22 @@
+<app-menu-layout>
+    <div class="grid grid-cols-6 gap-x-6 gap-y-10 p-4"  >
+        <ng-container *ngFor="let product of products">
+            <div class="product-name text-item">Product Name : {{product?.title}}</div>
+                <div class="img-container">
+                    <img class="max-h-32 object-contain"  [src]="product && product.image ? product.image : 'https://almunajemfoods.com/wp-content/uploads/2019/08/NO_IMG_500x500.png'" />
+                </div>
+                <div class="amount text-item">Amount : {{product?.amount}}</div>
+                <div class="price text-item">Price : {{product?.price}}$</div>
+                <div (click)="remove($event,product.id)" class="remove">remove</div>
+            
+
+        </ng-container>
+
+    </div>
+    <div class="button-and-icon">
+        <button class="confirm-button" (click)="onConfim()">
+            Confirm Payment</button>
+        <mat-icon class="check-icon">check</mat-icon>
+    </div>
+    <div class="total">Total :  {{total}}$</div>
+</app-menu-layout>

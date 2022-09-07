@@ -1,0 +1,12 @@
+.menu-container{
+    @apply font-mono from-neutral-900;
+    margin: 2rem;
+    box-shadow: 0px 0px 10px rgb(255, 253, 253);
+    padding: 1rem;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,350px));
+    gap: 1rem;
+   
+    
+}
